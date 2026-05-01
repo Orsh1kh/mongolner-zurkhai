@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МонголНэр Зурхай</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="logo">Монгол<span>Нэр</span> <em>Зурхай</em></div>
+  <div class="today-badge" id="todayBadge">⟳ ачааллаж байна...</div>
+</header>
+<div class="hero">
+  <div class="ornament">✦ ✦ ✦</div>
+  <h1>Өнөөдрийн <span>зурхай</span></h1>
+  <p class="hero-sub">Нэрээрээ эсвэл тэмдгээрээ зурхайгаа уншаарай</p>
+  <div class="search-wrap">
+    <input type="text" id="nameInput" placeholder="Нэрээ оруулна уу...">
+    <button onclick="searchByName()">Нэрээр хайх</button>
+  </div>
+  <div class="period-tabs">
+    <button class="tab active" onclick="setPeriod('today', this)">Өнөөдөр</button>
+    <button class="tab" onclick="setPeriod('tomorrow', this)">Маргааш</button>
+    <button class="tab" onclick="setPeriod('yesterday', this)">Өчигдөр</button>
+  </div>
+</div>
+<main>
+  <div class="signs-grid" id="signsGrid">
+    <div class="loading-all"><div class="spinner"></div><p>Зурхай ачааллаж байна...</p></div>
+  </div>
+  <div id="detailView" class="detail-hidden"></div>
+</main>
+<div class="modal-bg" id="modal">
+  <div class="modal-box">
+    <h2>✦ Premium зурхай</h2>
+    <p>Дэлгэрэнгүй зурхай, нийцэл, 2025-2026 оны хувь заяа</p>
+    <div class="m-feat">Хайр дурлалын дэлгэрэнгүй зурхай</div>
+    <div class="m-feat">Ажил, мөнгөний урьдчилсан мэдэгдэл</div>
+    <div class="m-feat">Нэрний + зурхайн нийцэл тооцоолуур</div>
+    <div class="m-feat">7 хоногийн зурхай</div>
+    <div class="price-box">
+      <div class="price-num">₮2,990</div>
+      <div class="price-sub">сард нэг удаа</div>
+    </div>
+    <button class="btn-pay" onclick="handlePay()">QPay-ээр төлөх</button>
+    <button class="btn-cancel" onclick="closeModal()">Болих</button>
+  </div>
+</div>
+<footer>© 2025 МонголНэр · mongolner.mn · Зурхай өдөр бүр шинэчлэгдэнэ</footer>
+<script src="app.js"></script>
+</body>
+</html>
